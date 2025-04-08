@@ -26,8 +26,20 @@ body {
 .msg {
     display: flex;
     min-height: 20px;
+    max-height: 40px;
+    min-width: 700px;
+    width: 80%;
+    margin: 0 auto;
     padding: 5%;
     border: 1px solid black;
+    box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
+}
+
+.message-body {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
 }
