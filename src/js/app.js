@@ -20,10 +20,16 @@ const formatDate = (timestamp) => {
   return `${hours}:${minutes} ${day}.${month}.${date.getFullYear()}`;
 };
 
+// присваивание класса сообщению
+function applyClass() {
+  const container = document.querySelector('.msgs-container');
+  return container.children.length === 0 ? 'msg, first-msg' : 'msg';
+}
+
 // Создание элемента сообщения
 const createMessageElement = (msg) => {
   const msgElement = document.createElement('div');
-  msgElement.className = 'msg';
+  msgElement.className = applyClass();
   
   msgElement.innerHTML = `
     <div class="email">${msg.from}</div>

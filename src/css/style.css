@@ -23,6 +23,23 @@ body {
     min-width: 400px;
 }
 
+/* Общие стили для всех сообщений */
+.first-msg {
+    display: flex;
+    min-height: 20px;
+    max-height: 40px;
+    min-width: 700px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 5%;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+
+    border: 1px solid black;
+}
+
+/* Стиль для остальных сообщений (без нижней границы) */
 .msg {
     display: flex;
     min-height: 20px;
@@ -31,10 +48,14 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 5%;
-    border: 1px solid black;
     box-sizing: border-box;
     justify-content: space-between;
     align-items: center;
+
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: none;
 }
 
 .message-body {
